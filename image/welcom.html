@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>欢迎来到汤臣一品</title>
+    <link rel="short icon" href="image/头像.jpg">
+	<style>
+		body {
+			background-color: #f5f5f5;
+			font-family: Arial;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 100px;
+			font-size: 36px;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="welcome-message"></h1>
+
+	<script>
+		var name = new URLSearchParams(window.location.search).get("name");
+		document.querySelector("#welcome-message").textContent = name + "，欢迎来到汤臣一品！";
+	</script>
+</body>
+</html>

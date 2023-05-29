@@ -52,6 +52,11 @@
 			color: red;
 			margin-bottom: 20px;
 		}
+
+		.success-message {
+			color: green;
+			margin-bottom: 20px;
+		}
 	</style>
 </head>
 <body>
@@ -61,6 +66,37 @@
 		<input type="password" name="password" placeholder="请输入密码" required>
 		<input type="submit" value="登录">
 		<p class="error-message"></p>
+		<p class="success-message"></p>
 	</form>
+
+	<script>
+		document.querySelector("form").addEventListener("submit", function(event) {
+			event.preventDefault();
+			var username = document.querySelector("input[name='username']").value;
+			var password = document.querySelector("input[name='password']").value;
+			var success = false;
+			var name;
+			if(username === "2108090212" && password === "123456") {
+				success = true;
+				name = "郭晓杰";
+			} else if(username === "2108090213" && password === "123456") {
+				success = true;
+				name = "何建文";
+			} else if(username === "2108090214" && password === "123456") {
+				success = true;
+				name = "洪梓翔";
+			} else if(username === "2108090216" && password === "123456") {
+				success = true;
+				name = "黄俊杰";
+			}
+
+			if(success) {
+				window.location.href = "image/welcom.html?name=" + name;
+			} else {
+				alert("账号或密码错误，请重新输入！");
+			}
+		});
+	</script>
+
 </body>
 </html>
