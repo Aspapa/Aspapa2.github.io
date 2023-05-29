@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>汤臣一品业主登陆系统</title>
+    <link rel="short icon" href="image/头像.jpg">
+	<style>
+		body {
+			background-color: #f5f5f5;
+			font-family: Arial;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		input[type="text"], input[type="password"] {
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+			font-size: 16px;
+			width: 300px;
+		}
+
+		input[type="submit"] {
+			background-color: #d13f3f;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.2s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #c32e2e;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 100px;
+			font-size: 36px;
+			color: #333;
+		}
+
+		.error-message {
+			color: red;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>汤臣一品业主登陆系统</h1>
+	<form>
+		<input type="text" name="username" placeholder="请输入账号" required>
+		<input type="password" name="password" placeholder="请输入密码" required>
+		<input type="submit" value="登录">
+		<p class="error-message"></p>
+	</form>
+</body>
+</html>
